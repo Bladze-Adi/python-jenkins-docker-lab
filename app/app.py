@@ -7,7 +7,8 @@ app = Flask(__name__)
 def home():
     return jsonify({
         "message": "Welcome to Python Flask App!",
-        "status": "success"
+        "status": "success",
+        "version": "1.0.0"
     })
 
 

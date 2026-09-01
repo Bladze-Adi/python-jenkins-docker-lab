@@ -64,7 +64,7 @@ pipeline {
                 echo "Verifying application availability..."
                 sh '''
                     sleep 5
-                    curl --fail http://54.226.28.166:${HOST_PORT}/health || exit 1
+                    curl --fail http://localhost:${HOST_PORT}/health || exit 1
                     echo "Deployment successfully verified!"
                 '''
             }

@@ -24,7 +24,7 @@ pipeline {
                     pip install -r requirements.txt
                     
                     echo "Running code quality checks with flake8..."
-                    flake8 app/ --max-line-length=100
+                    flake8 app/ --max-line-length=100 --jobs=1
                     
                     echo "Executing unit tests with pytest..."
                     PYTHONPATH=. pytest tests/ -v
